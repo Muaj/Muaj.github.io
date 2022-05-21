@@ -2,9 +2,9 @@
 layout: post
 title: Top Down Game
 subtitle: First time experimenting with Unity
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
+cover-img: /assets/img/diary.jpg
+thumbnail-img: /assets/img/diary.jpg
+share-img: /assets/img/diary.jpg
 tags: [unity, game]
 ---
 
