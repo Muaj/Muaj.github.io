@@ -67,4 +67,51 @@ The player unit projects its hitbox forwards and when it runs into the hitbox of
 
 ## Perlin Noise Map
 
-I'm currently experimenting with using perlin noise to generate my map tiles.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vgQ9mVN5RLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I'm currently experimenting with using perlin noise to generate my map tiles
+
+Some useful code for using perlin noise.
+
+We set the size of the map:
+
+```c#
+int map_width = 36;
+int map_height = 36;
+```
+
+So that when we generate the map it has its bounds already set in, you can make the map as big and wide as you want, but for this example i just made it 36x36.
+
+This is the code for generating the maptiles:
+
+```c#
+    void GenerateMap()
+    {
+        for (int x = 0; x < map_width; x++)
+        {
+            noise_grid.Add(new List<int>());
+            tile_grid.Add(new List<GameObject>());
+
+            for (int y = 0; y < map_height; y++)
+            {
+                int tile_id = GetIdUsingPerlin(x, y);
+                noise_grid[x].Add(tile_id);
+                CreateTile(tile_id, x, y);
+            }
+        }
+    }
+```
+
+You have to create a dictionary for your tiles you plan to use in your map
+
+```c#
+    void CreateTileset()
+    {
+        tileset = new Dictionary<int, GameObject>();
+        tileset.Add(0, prefab_floor);
+        tileset.Add(1, prefab_wall);
+        tileset.Add(2, prefab_tiles);
+    }
+```
+
+I titled my elements prefab_floor, prefab_wall, prefab_tiles, but you can honestly name them whatever you want eg. water, abyss, etc.
