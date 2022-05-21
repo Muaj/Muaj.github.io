@@ -16,8 +16,8 @@ author: Tim M. Vue
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: ""
-    - Learn markdown: ""
+    #- Beautiful Jekyll: ""
+    #- Learn markdown: ""
   Author's home: ""
 
 # --- Logo --- #
