@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: Tims Personal Blog
+title: Tims Dev Blog
 
 # Your name to show in the footer
 author: Tim M. Vue
@@ -68,7 +68,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a personal blog for Tim Vue
+rss-description: This is where I post my projects
 
 # --- General options --- #
 
